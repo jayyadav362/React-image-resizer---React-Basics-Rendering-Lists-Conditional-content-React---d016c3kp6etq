@@ -7,11 +7,11 @@ const App = () => {
 
   return (
     <div id="main">
-        <input type="range" min="100" max="800" value={`${height}px`} id="height-slider" onChange={(e)=>setHeight(e.target.value)}></input>
+        <input type="range" min="100" max="800" value={height} id="height-slider" onChange={(e)=>setHeight(e.target.value)}></input>
         <div>{height}px</div>
-        <input type="range" min="100" max="800" value={`${width}px`} id="width-slider" onChange={()=>setWidth(e.target.value)}></input>
+        <input type="range" min="100" max="800" value={width} id="width-slider" onChange={()=>setWidth(e.target.value)}></input>
         <div>{width}px</div>
-        <img id='resizable-img' src='../src/image.jpeg' height={height} width={width} alt="resizable-img"/>
+        <img id='resizable-img' src='../src/image.jpeg' height={`${height}px`} width={`${width}px`} alt="resizable-img"/>
     </div>
   )
 }
